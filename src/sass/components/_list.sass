@@ -1,0 +1,11 @@
+.list
+	+f(16px, 400, 1.25)
+	&__item
+		&:not(:last-child)
+			margin-bottom: 5px
+	&__label,
+	&__value
+		display: inline-block
+		vertical-align: top
+	&__label
+		color: lighten($darkGray, 50%)

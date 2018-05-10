@@ -1,0 +1,31 @@
+<!-- begin form -->
+<div class="form">
+	<div class="form__item">
+		<div class="form__label">SF transaction ID:</div>
+		<div class="form__field">
+			<input type="text" class="input">
+			<button class="btn btn_primary form__btn" data-animation="ripple">Find</button>
+		</div>
+	</div>
+	<div class="form__item">
+		<div class="form__label">Details:</div>
+		<div class="form__field">
+			<ul class="list form__list">
+				{% for item in [
+					{ label: 'Plan', value: '$35 Unlimited Talk&Text' },
+					{ label: 'MDN', value: '(234) 575 3753' },
+					{ label: 'Device', value: 'iPhone 5s Silver (8787687876878768)' },
+					{ label: 'Discount', value: '$50' },
+					{ label: 'Downpayment', value: '$30' }
+				] %}
+					<li class="list__item">
+						<div class="list__label">{{item.label}}:</div>
+						<div class="list__value">{{item.value}}</div>
+					</li>
+				{% endfor %}
+			</ul>
+			<button class="btn btn_primary form__btn" data-animation="ripple">Download to POS</button>
+		</div>
+	</div>
+</div>
+<!-- end form -->
