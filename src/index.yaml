@@ -3,3 +3,4 @@ ProjectTitle: salesforce
 PageList:
 - file: home.html
 - file: modals.html
+- file: loader.html
