@@ -1,0 +1,18 @@
+<!-- begin modal -->
+<div class="modal" data-modal="phone">
+	<div class="modal__overlay" data-modal-close></div>
+	<div class="modal__container" data-modal-container>
+		<button class="modal__close" data-modal-close>
+			{{mixins.icon('close', 'modal__close-icon')}}
+		</button>
+		<div class="modal__header">
+			<div class="modal__title">Phone is not found</div>
+		</div>
+		<div class="modal__body">The ESN # {phoneSerial} was not found in the system stock. Is it customer phone?</div>
+		<div class="modal__footer">
+			<button class="btn btn_red modal__btn" data-animation="ripple" data-modal-close>No</button>
+			<button class="btn btn_primary modal__btn" data-animation="ripple" data-modal-close>Yes</button>
+		</div>
+	</div>
+</div>
+<!-- end modal -->

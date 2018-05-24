@@ -12,18 +12,12 @@
 
   <body>
     <!-- BEGIN content -->
-    <!-- begin header -->
-    <header class="header">
-      <div class="inner header__inner">
-        <h1 class="header__title">Salesforce phone activation&nbsp;&&nbsp;payment</h1>
-      </div>
-    </header>
-    <!-- end header -->
     <div class="main">
       <div class="inner">
         <ul>
           <li> <a href="#" data-modal-control="error">error</a> </li>
           <li> <a href="#" data-modal-control="alert">alert</a> </li>
+          <li> <a href="#" data-modal-control="phone">phone</a> </li>
         </ul>
       </div>
       <!-- begin modal -->
@@ -55,6 +49,22 @@
           </div>
           <div class="modal__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, saepe.</div>
           <div class="modal__footer"> <button class="btn btn_red modal__btn" data-animation="ripple" data-modal-close>Cancel</button> <button class="btn btn_primary modal__btn" data-animation="ripple" data-modal-close>OK</button> </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- begin modal -->
+      <div class="modal" data-modal="phone">
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
+			
+	<svg class="icon icon-close modal__close-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+          <div class="modal__header">
+            <div class="modal__title">Phone is not found</div>
+          </div>
+          <div class="modal__body">The ESN # {phoneSerial} was not found in the system stock. Is it customer phone?</div>
+          <div class="modal__footer"> <button class="btn btn_red modal__btn" data-animation="ripple" data-modal-close>No</button> <button class="btn btn_primary modal__btn" data-animation="ripple" data-modal-close>Yes</button> </div>
         </div>
       </div>
       <!-- end modal -->

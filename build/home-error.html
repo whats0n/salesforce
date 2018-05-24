@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="main">
+      <div class="inner">
+        <!-- begin form -->
+        <div class="form">
+          <div class="form__item">
+            <div class="form__label">Order Number:</div>
+            <div class="form__field"> <input type="text" class="input"> <button class="btn btn_primary form__btn" data-animation="ripple">Find</button> </div>
+          </div>
+          <div class="form__item is-error">
+            <div class="form__label">Error:</div>
+            <div class="form__field">
+              <div class="form__text">
+                <p>Cannot find carrier mapped for integration</p>
+              </div> <button class="btn btn_primary form__btn" data-animation="ripple">Download to POS</button> </div>
+          </div>
+        </div>
+        <!-- end form -->
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

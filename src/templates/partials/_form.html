@@ -1,31 +1,42 @@
 <!-- begin form -->
 <div class="form">
 	<div class="form__item">
-		<div class="form__label">SF transaction ID:</div>
+		<div class="form__label">Order Number:</div>
 		<div class="form__field">
 			<input type="text" class="input">
 			<button class="btn btn_primary form__btn" data-animation="ripple">Find</button>
 		</div>
 	</div>
-	<div class="form__item">
-		<div class="form__label">Details:</div>
-		<div class="form__field">
-			<ul class="list form__list">
-				{% for item in [
-					{ label: 'Plan', value: '$35 Unlimited Talk&Text' },
-					{ label: 'MDN', value: '(234) 575 3753' },
-					{ label: 'Device', value: 'iPhone 5s Silver (8787687876878768)' },
-					{ label: 'Discount', value: '$50' },
-					{ label: 'Downpayment', value: '$30' }
-				] %}
-					<li class="list__item">
-						<div class="list__label">{{item.label}}:</div>
-						<div class="list__value">{{item.value}}</div>
-					</li>
-				{% endfor %}
-			</ul>
-			<button class="btn btn_primary form__btn" data-animation="ripple">Download to POS</button>
-		</div>
+	<div class="form__item {% if error %}is-error{% endif %}">
+		{% if error %}
+			<div class="form__label">Error:</div>
+			<div class="form__field">
+				<div class="form__text">
+					<p>Cannot find carrier mapped for integration</p>
+				</div>
+				<button class="btn btn_primary form__btn" data-animation="ripple">Download to POS</button>
+			</div>
+		{% else %}
+			<div class="form__label">Description:</div>
+			<div class="form__field">
+				<ul class="list form__list">
+					{% for item in [
+						{ label: 'Customer', value: 'John Doe' },
+						{ label: 'Phone #', value: '(123) 456 7788' },
+						{ label: 'Plan', value: '$35 Unlimited Talk&Text (XPL023)' },
+						{ label: 'Contract type', value: 'Activation' },
+						{ label: 'Device', value: 'iPhone X Silver 64 Gb (serial:&nbso;123456780809898)' },
+						{ label: 'SIM', value: 'SIM card (serial:&nbsp;9898978667876767)' }
+					] %}
+						<li class="list__item">
+							<div class="list__label">{{item.label}}:</div>
+							<div class="list__value">{{item.value | safe}}</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<button class="btn btn_primary form__btn" data-animation="ripple">Download to POS</button>
+			</div>
+		{% endif %}
 	</div>
 </div>
 <!-- end form -->

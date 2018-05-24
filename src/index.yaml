@@ -2,5 +2,6 @@ ProjectTitle: salesforce
 
 PageList:
 - file: home.html
+- file: home-error.html
 - file: modals.html
 - file: loader.html
