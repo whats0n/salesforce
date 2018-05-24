@@ -14,7 +14,7 @@
 				<div class="form__text">
 					<p>Cannot find carrier mapped for integration</p>
 				</div>
-				<button class="btn btn_primary form__btn" data-animation="ripple">Download to POS</button>
+				<button class="btn btn_primary form__btn" data-animation="ripple" disabled>Download to POS</button>
 			</div>
 		{% else %}
 			<div class="form__label">Description:</div>
@@ -25,12 +25,12 @@
 						{ label: 'Phone #', value: '(123) 456 7788' },
 						{ label: 'Plan', value: '$35 Unlimited Talk&Text (XPL023)' },
 						{ label: 'Contract type', value: 'Activation' },
-						{ label: 'Device', value: 'iPhone X Silver 64 Gb (serial:&nbso;123456780809898)' },
-						{ label: 'SIM', value: 'SIM card (serial:&nbsp;9898978667876767)' }
+						{ label: 'Device', value: 'iPhone X Silver 64 Gb (serial: 123456780809898)' },
+						{ label: 'SIM', value: 'SIM card (serial: 9898978667876767)' }
 					] %}
 						<li class="list__item">
 							<div class="list__label">{{item.label}}:</div>
-							<div class="list__value">{{item.value | safe}}</div>
+							<div class="list__value">{{item.value}}</div>
 						</li>
 					{% endfor %}
 				</ul>
