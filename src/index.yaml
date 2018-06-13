@@ -5,3 +5,6 @@ PageList:
 - file: home-error.html
 - file: modals.html
 - file: loader.html
+- file: message-default.html
+- file: message-error.html
+- file: message-success.html

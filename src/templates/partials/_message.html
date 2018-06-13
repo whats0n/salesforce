@@ -1,0 +1,10 @@
+<!-- begin message -->
+<div class="message {{message.classList}}">
+	{% if message.close %}
+		<button class="message__close">
+			{{mixins.icon('close', 'message__close-icon')}}
+		</button>
+	{% endif %}
+	<p>{{message.text or 'Confirmation of order is currently processing by the app Incomm. Please wait.'}}</p>
+</div>
+<!-- end message -->

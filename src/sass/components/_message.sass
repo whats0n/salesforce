@@ -1,0 +1,28 @@
+.message
+	position: relative
+	overflow: hidden
+	padding: 30px
+	width: 100%
+	height: 100vh
+	color: $white
+	background: #434c55
+	font-size: 16px
+	text-align: left
+	&.is-success
+		background: #22B745
+	&.is-error
+		background: #ec4a41
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+		width: 50px
+		height: 50px
+		color: $white
+		background: none
+		+vertical
+		&-icon 
+			display: inline-block
+			vertical-align: middle
+			fill: currentColor
+			font-size: 14px
